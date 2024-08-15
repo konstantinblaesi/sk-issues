@@ -4,7 +4,10 @@
 
 	export let data;
 
-	const sForm1 = superForm(data.form1);
+	let options = undefined;
+	// bug workaround: set resetForm: false
+	// options = { resetForm: false };
+	const sForm1 = superForm(data.form1, options);
 	const sForm2 = superForm(data.form2);
 
 	const { errors: errors1 } = sForm1;
